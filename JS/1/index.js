@@ -37,12 +37,6 @@ function changeSecondElementStyle(event){
     }
 }
 
-
-
-
-
-
-
 h2Element.addEventListener("click", changeFirstAndLastElementsStyles);
 divElement.addEventListener("click", changeFirstAndLastElementsStyles);
 pElement.addEventListener("click", changeSecondElementStyle);
