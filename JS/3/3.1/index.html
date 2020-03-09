@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="index.php">
+    <select name="furniture_kind" class="furniture_kind">
+        <option name="cupboard">Шкаф</option>
+        <option name="table">Стол</option>
+        <option name="sideboard">Сервант</option>
+    </select>
+    <select name="made_of" class="made_of">
+        <option name="oak">дуб</option>
+        <option name="walnut">орех</option>
+        <option name="beech">бук</option>
+    </select>
+    <input type="number" name="count" class="count"/>
+    <input type="submit" value="Отправить" class="submit_button" disabled/>
+</form>
+
+<script src="index.js"></script>
+</body>
+</html>
