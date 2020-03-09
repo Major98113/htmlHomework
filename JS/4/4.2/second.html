@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>4.2</title>
+    <title>Ellipse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        input {
+            margin: 10px;
+            width: 50px;
+        }
+    </style>
+    <script type="text/javascript" src="second.js"></script>
+    <script type="text/javascript">
+        let ctx, canv;
+        onload = function () {
+            canv = document.getElementById('canv');
+            ctx = canv.getContext('2d');
+            draw();
+        };
+
+        function ge(id) {
+            return document.getElementById(id);
+        };
+
+        function draw() {
+            var a = parseFloat(ge('a').value),
+                b = parseFloat(ge('b').value),
+                x = 320,
+                y = 240;
+            drawLine(ctx, [0, y], [2*x, y]);
+            drawLine(ctx, [x, 0], [x, 2*y]);
+            drawEllipse(ctx, x, y, a, b);
+        }
+    </script>
 </head>
+
 <body>
-<canvas id="canvas" width="500" height="500" style="display:block; margin:0 auto; border:1px solid black; margin-top:50px"></canvas>
-<script src="second.js"></script>
+<canvas id="canv" width="640" height="480" style="outline: 1px solid lightgray"></canvas><br />
+a=<input type="text" id="a" value="200" />
+b=<input type="text" id="b" value="125" />
+<button onclick="draw()">Нарисовать</button>
+<button onclick="ctx.clearRect(0, 0, 640, 480)">Очистить</button>
 </body>
+
 </html>
