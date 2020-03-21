@@ -30,12 +30,14 @@
 
         #draw_field{
             position: absolute;
-            top: 0px;
-            left: 0px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .point{
-            position: relative;
+            position: absolute;
             width: 2px;
             height: 2px;
             background-color: black;
@@ -47,6 +49,20 @@
     <div class="horizontal_line"></div>
     <div class="vertical_line"></div>
     <div id="draw_field"></div>
+    <div>
+        <span>Введите x: </span>
+        <label>
+            <input type="number" class="param_x"/>
+        </label>
+    </div>
+    <div>
+        <span>Введите y: </span>
+        <label>
+            <input type="number" class="param_y"/>
+        </label>
+    </div>
+    <button class="submit">Нарисовать</button>
+    <button class="clear">Сбросить</button>
 </div>
 <script src="index.js"></script>
 </body>
